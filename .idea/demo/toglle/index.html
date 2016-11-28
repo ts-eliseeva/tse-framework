@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tse-toglle-animate-demo</title>
+    <link rel="stylesheet" type="text/css" href="media/libcss/toglle-demo.css" media="screen" />
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="media/libjs/toglle.js"></script>
+</head>
+<body>
+    <div class="right-bar active" data-tse-toglle=".btn-bar" data-tse-toglle-animate="right: -400px">
+        <div class="fullscrin" >
+            <div class="fullscrin-panel"><a class="fullscrin-expand">[ ]</a></div>
+            <pre id="editor">1</pre>
+        </div>
+        <button class="btn-bar">Открыть/закрыть</button>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            var leftPosition = $('body').innerWidth()-$('.right-bar').innerWidth();
+            $('.right-bar').animatetoglle(
+                    {
+                        pointAnimate: {
+                            right: "-" + $('.fullscrin').innerWidth()+'px'
+                        },
+                        events: 'mouseenter'
+                    },
+                    $('.fullscrin')
+            );
+            $('.right-bar').animatetoglle(
+                    {
+                        pointAnimate: {
+                            width: "100%",
+
+                        },
+                        cssAnimate: {
+                            position: "fixed"
+                        }
+                    },
+                    $('.fullscrin-expand')
+            )
+        });
+    </script>
+</body>
+</html>

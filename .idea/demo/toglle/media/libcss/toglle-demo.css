@@ -1,0 +1,48 @@
+body{
+    width: 100%;
+    overflow: hidden;
+}
+.fullscrin{
+    background: #fff;
+    position: relative;
+    height: 100%;
+    border-left: 1px solid #000;
+}
+.fullscrin-panel{
+    background:#000;
+    opacity: 0.7;
+    position: relative;
+    height: 24px;
+}
+.fullscrin-expand{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding-right: 15px;
+    float: right;
+    cursor: pointer;
+}
+.fullscrin-expand:hover{
+    opacity: 0.5;
+}
+.btn-bar{
+    transform:rotate(-90deg);
+    -moz-transform:rotate(-90deg);
+    -webkit-transform:rotate(-90deg);
+    position: absolute;
+    top: 50%;
+    left: -70px;
+    margin-top: -10px;
+}
+#editor{
+    padding: 10px;
+    font-size: 16px;
+}
+.right-bar{
+    display: inline-block;
+    width: 400px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
